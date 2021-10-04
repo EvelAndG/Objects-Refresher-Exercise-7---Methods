@@ -4,19 +4,13 @@ class MainClass
 {
   public static void Main (string[] args) 
 	{
+	Crypto crypto1 = new Crypto("Etherium", "ETH", 100, 2);
 
-		Crypto firstCrypto = new Crypto ("Etherium", "ETH", 100, 2);
+	Console.WriteLine(crypto1.Name);
 
-		Crypto secondCrypto = new Crypto();
-
-		Console.WriteLine(secondCrypto.AmountOwned);
-
-		Console.WriteLine(firstCrypto.Name);
-
-	
+	crypto1.Product();
 
 
-		
   
   }
 
@@ -35,8 +29,6 @@ class MainClass
 		CurrentPrice = 0;
 		AmountOwned = 0;
 	}
-
-
 	public Crypto(string name, string tokenName, double currentPrice, double amountOwned)
 	{
 		Name = name;
@@ -46,9 +38,20 @@ class MainClass
 
 	}
 
-
+	public void Product() 
+	{
+		double result = CurrentPrice * AmountOwned;
+		Console.WriteLine(result);
+		;
 
 	}
 
+
+
+
+	}
+	
+
+	
 
 }
