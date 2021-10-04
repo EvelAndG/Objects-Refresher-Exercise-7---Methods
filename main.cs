@@ -8,7 +8,7 @@ class MainClass
 
 	Console.WriteLine(crypto1.Name);
 
-	crypto1.Product();
+	Console.WriteLine(crypto1.Product());
 
 
   
@@ -38,11 +38,10 @@ class MainClass
 
 	}
 
-	public void Product() 
+	public double Product() 
 	{
 		double result = CurrentPrice * AmountOwned;
-		Console.WriteLine(result);
-		;
+		return result;
 
 	}
 
